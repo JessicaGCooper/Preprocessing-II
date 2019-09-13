@@ -13,10 +13,21 @@
         justify-content: space-between;
         max-width: 800px;
         width: 100%;
+
+        @media @mobile {
+          flex-direction: column;      
+        }
     
         h1 {
             width: 25%;
             padding-bottom: 15px;
+
+            @media @mobile {
+                width: 100%;
+                text-align: center;
+                font-size: 3.2rem;
+                padding-bottom: 5px;
+            }
         }
         
         nav {
@@ -25,12 +36,20 @@
             align-items: flex-end;
             width: 50%;
 
+            @media @mobile {
+                width: 100%;
+            }
+
             a {
               color: @font-color;
               font-size: 1.5rem;
               text-decoration: none;
               font-family: @fontBody;
               padding-bottom: 30px;
+
+                @media @mobile {
+                    padding: 5px;
+                }
             }
         }
     }

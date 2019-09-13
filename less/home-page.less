@@ -6,6 +6,10 @@ header {
   margin: 0 auto;
   border-bottom: 2px dashed @navigation-border;
 
+  @media @mobile {
+    width: 90%;
+  }
+
   h2 {
     padding-top: 20px;
   }
@@ -18,6 +22,9 @@ header {
 
 
 .home {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 
   .content-section {
     margin: 30px 0;
@@ -26,8 +33,10 @@ header {
     justify-content: space-between;
 
     @media @mobile {
+      display: flex;
       flex-direction: column;
       align-content: center;
+      width: 90%;
     }
     
     .text-content {
@@ -35,9 +44,9 @@ header {
       padding-right: 1%;
 
       @media @mobile {
-        width: 90%;
-        padding-right: 5%;
-        padding-left: 5%;
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
       }
     }
 
@@ -49,14 +58,14 @@ header {
         display: flex;
         justify-content: center;
         width: 100%;
+        padding: 0;
       }
 
       img {
         border-radius: 10px;
 
         @media @mobile {
-          margin-left: 2.5%;
-          margin-right: 2.5%;
+          width: 100%;
         }
       }
     }
@@ -73,11 +82,21 @@ header {
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        padding: 0;
+      }
+      
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      
+      @media @mobile {
+        padding: 0;
+      }
+
     }
   }
 
@@ -86,11 +105,11 @@ header {
     margin: 0 auto 30px;
 
     @media @mobile {
-      width: 95%;
-      padding-left: 2.5%;
-      padding-right: 2.5%;
+      width: 90%;
+      margin: 0;
+      padding-bottom: 30px;
+      border-bottom: 2px dashed @navigation-border;
     }
-
 
     img {
       border-radius: 10px;
@@ -105,19 +124,29 @@ header {
 
     @media @mobile {
       flex-direction: column;
-      align-content: center;
+      align-items: center;
+      border: none;
     }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
 
+      @media @mobile {
+        width: 80%;
+      }
+
+
       button {
         .button (2rem, 10px 0px);
 
         &:hover {
           background-color: darken(@button-bg, 15%);
-        } 
+        }
+        
+        @media @mobile {
+          width: 100%;
+        }
       }
     }
   }
